@@ -296,7 +296,7 @@
         console.log("collectCoin");
         coins.disableBody(true, true); // disable coins -> no events where thrown when overlapping
         score ++;
-        scoreText.setText("Bitcoin Bag = " + score);
+        scoreText.setText("Mining Tdog = " + score);
       }
 
       /***************************************************************
