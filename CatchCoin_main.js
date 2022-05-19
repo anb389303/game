@@ -6,7 +6,7 @@
       // set screensize static
       const WIDTH = 1000;
       const HEIGHT = 750;
-      const GAME_TIME = 60;
+      const GAME_TIME = 120;
 
       // define Keyboard
       var keys;
