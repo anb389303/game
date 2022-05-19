@@ -10,7 +10,7 @@ var contractAddress = "0xda1A573d6B19F4c5207f199A1d5e97aBA02eed1F";
 $(document).ready(function() {
   // to enabel accounts (trough metamask) and create Contract instance
   window.ethereum.enable().then(function(accounts) {
-    catchCoinContract = new web3.tt.Contract(
+    catchCoinContract = new web3.eth.Contract(
       abi, contractAddress
     );
   })
