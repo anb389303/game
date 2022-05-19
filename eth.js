@@ -3,7 +3,7 @@
 // web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9545"));
 
 // to interact with metamask change provider to currentProvider
-var web3 = new Web3(web3.currentProvider);
+var web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet-rpc.thundercore.com"));
 var catchCoinContract;
 var contractAddress = "0xda1A573d6B19F4c5207f199A1d5e97aBA02eed1F";
 
