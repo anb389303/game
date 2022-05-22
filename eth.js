@@ -35,6 +35,6 @@ function mintToAddrAfterGame(address,nrOfTokens){
     {from:address}
   )
   .on('receipt', receipt => {
-    alert("Transaction Successfully ");
+    alert("Transaction Successful");
   });
 }
