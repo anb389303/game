@@ -199,7 +199,7 @@
 
         // add scoreText and timeLeftText to screen
         scoreText = this.add.text(16, 16,  // position
-                                  "Bitcoin Bag = 0", // text
+                                  "TdogMiner TDR = 0", // text
                                   {
                                     fontSize: "32px",
                                     fill: "#000" //black -> google "hex color picker"
