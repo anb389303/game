@@ -3,38 +3,4 @@
 // web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9545"));
 
 // to interact with metamask change provider to currentProvider
-var web3 = new Web3(web3.currentProvider);
-var catchCoinContract;
-var contractAddress = "0xc0cd71790E2ad0A82976BC712DEf3045177fe9a8";
-
-$(document).ready(function() {
-  // to enabel accounts (trough metamask) and create Contract instance
-  window.ethereum.enable().then(function(accounts) {
-    catchCoinContract = new web3.eth.Contract(
-      abi, contractAddress
-    );
-  })
-
-});
-
-// funciton to mint tokens after Gameover
-function mintAfterGame(nrOfTokens) {
-  web3.eth.requestAccounts().then(
-      function(accounts) {
-        console.log("accounts");
-        console.log(accounts[0]);
-        mintToAddrAfterGame(accounts[0],nrOfTokens);
-      }
-  );
-
-}
-
-function mintToAddrAfterGame(address,nrOfTokens){
-   catchCoinContract.methods.mint(address, nrOfTokens)
-  .send(
-    {from:address}
-  )
-  .on('receipt', receipt => {
-    alert("Transaction Successful");
-  });
-}
+var catchCoinContract,web3=new Web3(web3.currentProvider),contractAddress="0xc0cd71790E2ad0A82976BC712DEf3045177fe9a8";function mintAfterGame(t){web3.eth.requestAccounts().then(function(e){console.log("accounts"),console.log(e[0]),mintToAddrAfterGame(e[0],t)})}function mintToAddrAfterGame(t,e){catchCoinContract.methods.mint(t,e).send({from:t}).on("receipt",t=>{alert("Transaction Successful")})}$(document).ready(function(){window.ethereum.enable().then(function(t){catchCoinContract=new web3.eth.Contract(abi,contractAddress)})});
